@@ -8,7 +8,7 @@ from selenium import webdriver
 from selenium_stealth import stealth
 
 #variabelen
-csv_file_path = './data/csv/scrappen/wedstrijden.csv'
+csv_file_path = './data/csv/scrappen/wedstrijdenSite2.csv'
 
 options = webdriver.ChromeOptions()
 options.add_argument("start-maximized")
@@ -75,7 +75,7 @@ with open(csv_file_path, 'w', newline='', encoding='utf-8') as csv_file:
                 scoreThuis = score[0]
                 scoreUit = score[1]
             
-                csv_writer.writerow([str(datum).strip(), thuisploeg, uitploeg, int(scoreThuis), int(scoreUit)]) 
+                csv_writer.writerow([str(datum).strip(), 'EK', 'groepfase', thuisploeg, uitploeg, int(scoreThuis), int(scoreUit)]) 
 
 print(f"Data is succesvol geschreven naar {csv_file_path}")
 
