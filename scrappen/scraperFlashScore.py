@@ -35,7 +35,7 @@ if not os.path.exists('data/csv/scrappen/'):
 
 def get_jaren():
     huidige_jaar = datetime.datetime.now().year
-    return [jaar for jaar in range(2024, huidige_jaar + 1, 4)]
+    return [jaar for jaar in range(1960, huidige_jaar + 1, 4)]
 
 with open(csv_file_path, 'w', newline='', encoding='utf-8') as csv_file:
     csv_writer = csv.writer(csv_file)

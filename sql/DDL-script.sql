@@ -63,7 +63,6 @@ CREATE TABLE [dbo].[FactMatchen](
 	ScoreHome INT NOT NULL,
 	ScoreAway INT NOT NULL,
     TypeKey INT NOT NULL,
-	[Type] [varchar](50) NOT NULL,
 	PRIMARY KEY (MactchKey),
 	FOREIGN KEY (DateKey) REFERENCES [DimDate](DateKey),
 	FOREIGN KEY (TimeKey) REFERENCES [DimTime](TimeKey),
